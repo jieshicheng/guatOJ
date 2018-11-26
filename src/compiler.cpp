@@ -1,0 +1,152 @@
+//
+// Created by 程杰仕 on 2018/11/2.
+//
+
+#include <zconf.h>
+#include <iostream>
+#include "compiler.h"
+#include "lib/OJlib.h"
+#include "single_pipe.h"
+#include <errno.h>
+
+namespace guatoj
+{
+
+const std::string &compiler::get_file_path() const
+{
+    return _file_path;
+}
+
+void compiler::set_file_path(const std::string &file_path)
+{
+    _file_path = file_path;
+}
+
+const std::vector<std::string, std::allocator<std::string>> &compiler::get_parameters() const
+{
+    return _parameters;
+}
+
+void compiler::set_parameters(const std::vector<std::string, std::allocator<std::string>> &parameters)
+{
+    _parameters = parameters;
+}
+
+void compiler::clear_errmsg()
+{
+    _err_buff.clear();
+}
+
+const std::string &compiler::get_compiler_errmsg()
+{
+    return _err_buff;
+}
+
+void compiler::set_compiler_errmsg() throw(pipe_read_exception)
+{
+    int read_fd, write_fd;
+    try
+    {
+        read_fd = _pipe_fd.get_read_descriptor();
+        write_fd = _pipe_fd.get_write_descriptor();
+
+    }
+    catch (bad_pipe_exception &exp)
+    {
+        // ... log here
+        _err_buff = "bad pipe exception in compiler::set_compiler_errmsg, can't get compiler error message, but the compiler is failed";
+        return;
+    }
+
+
+    int already_read = 0;
+    int left_read = PIPE_ERRMSG_SIZE;
+
+    std::shared_ptr<char> buf(new char[PIPE_ERRMSG_SIZE]);
+
+    while (left_read > 0)
+    {
+        ssize_t result = read(read_fd, buf.get(), left_read);
+        if (result == 0)
+            break;
+        else if (result == -1)
+        {
+            // pipe is noblock, so that if pipe is empty, read will return -1.
+            if (errno == EAGAIN)
+                break;
+            else
+                throw pipe_read_exception();
+        }
+
+        already_read += result;
+        left_read -= result;
+        _err_buff += buf.get();
+    }
+}
+
+std::string compiler::get_random_name()
+{
+    srand(time(nullptr));
+    return std::to_string(rand());
+}
+
+const std::string &compiler::get_user_name() const
+{
+    return _user_name;
+}
+
+void compiler::set_user_name(const std::string &user_name)
+{
+    _user_name = user_name;
+}
+
+/**
+ * _parameter[1] == source file path
+ * _parameter[3] == destination file path
+ *
+ * @return the elf file path. if compiler failed return ""
+ */
+std::string cpp_compiler::do_compiler()
+{
+    clear_errmsg();
+
+    pid_t pid;
+    char path_buf[100];
+    std::string execuate_file = getcwd(path_buf, 100) + ("/" + _user_name + get_random_name());
+    if ((pid = fork()) == 0)
+    {
+        // child
+        // exec g++ file
+        // child process don't need readFd, it just write message to father process
+        close(_pipe_fd.get_read_descriptor());
+        // copy writeFd to stderr descriptor
+        dup2(_pipe_fd.get_write_descriptor(), STDERR_FILENO);
+        // close redundancy descriptor
+        close(_pipe_fd.get_write_descriptor());
+
+        _parameters[1] = _file_path;
+        _parameters[3] = execuate_file;
+
+        execvp_vec(_parameters);
+
+        // if process run here. means error occur
+        _exit(1);
+    }
+    else
+    {
+        int status;
+        if (waitpid(pid, &status, 0) == -1)
+        {
+            _err_buff = "error in do_compiler function: waitpid return -1";
+            return std::string();
+        }
+        if (WEXITSTATUS(status) != 0)
+        {
+            set_compiler_errmsg();
+            return std::string();
+        }
+        return execuate_file;
+    }
+}
+
+} // end of namespace guatoj
