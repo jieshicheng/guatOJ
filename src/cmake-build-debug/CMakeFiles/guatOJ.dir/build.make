@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jieshi/CLionProjects/guatOJ
+CMAKE_SOURCE_DIR = /Users/jieshi/Documents/GitHub/guatOJ/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jieshi/CLionProjects/guatOJ/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/guatOJ.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/guatOJ.dir/flags.make
 
 CMakeFiles/guatOJ.dir/main.cpp.o: CMakeFiles/guatOJ.dir/flags.make
 CMakeFiles/guatOJ.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/guatOJ.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/main.cpp.o -c /Users/jieshi/CLionProjects/guatOJ/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/guatOJ.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/main.cpp.o -c /Users/jieshi/Documents/GitHub/guatOJ/src/main.cpp
 
 CMakeFiles/guatOJ.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/guatOJ.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/CLionProjects/guatOJ/main.cpp > CMakeFiles/guatOJ.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/Documents/GitHub/guatOJ/src/main.cpp > CMakeFiles/guatOJ.dir/main.cpp.i
 
 CMakeFiles/guatOJ.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/guatOJ.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/CLionProjects/guatOJ/main.cpp -o CMakeFiles/guatOJ.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/Documents/GitHub/guatOJ/src/main.cpp -o CMakeFiles/guatOJ.dir/main.cpp.s
 
 CMakeFiles/guatOJ.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/guatOJ.dir/main.cpp.o.provides.build: CMakeFiles/guatOJ.dir/main.cpp.
 
 CMakeFiles/guatOJ.dir/compiler.cpp.o: CMakeFiles/guatOJ.dir/flags.make
 CMakeFiles/guatOJ.dir/compiler.cpp.o: ../compiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/guatOJ.dir/compiler.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/compiler.cpp.o -c /Users/jieshi/CLionProjects/guatOJ/compiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/guatOJ.dir/compiler.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/compiler.cpp.o -c /Users/jieshi/Documents/GitHub/guatOJ/src/compiler.cpp
 
 CMakeFiles/guatOJ.dir/compiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/guatOJ.dir/compiler.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/CLionProjects/guatOJ/compiler.cpp > CMakeFiles/guatOJ.dir/compiler.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/Documents/GitHub/guatOJ/src/compiler.cpp > CMakeFiles/guatOJ.dir/compiler.cpp.i
 
 CMakeFiles/guatOJ.dir/compiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/guatOJ.dir/compiler.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/CLionProjects/guatOJ/compiler.cpp -o CMakeFiles/guatOJ.dir/compiler.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/Documents/GitHub/guatOJ/src/compiler.cpp -o CMakeFiles/guatOJ.dir/compiler.cpp.s
 
 CMakeFiles/guatOJ.dir/compiler.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/guatOJ.dir/compiler.cpp.o.provides.build: CMakeFiles/guatOJ.dir/compi
 
 CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o: CMakeFiles/guatOJ.dir/flags.make
 CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o: ../lib/OJlib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o -c /Users/jieshi/CLionProjects/guatOJ/lib/OJlib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o -c /Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.cpp
 
 CMakeFiles/guatOJ.dir/lib/OJlib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/guatOJ.dir/lib/OJlib.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/CLionProjects/guatOJ/lib/OJlib.cpp > CMakeFiles/guatOJ.dir/lib/OJlib.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.cpp > CMakeFiles/guatOJ.dir/lib/OJlib.cpp.i
 
 CMakeFiles/guatOJ.dir/lib/OJlib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/guatOJ.dir/lib/OJlib.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/CLionProjects/guatOJ/lib/OJlib.cpp -o CMakeFiles/guatOJ.dir/lib/OJlib.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.cpp -o CMakeFiles/guatOJ.dir/lib/OJlib.cpp.s
 
 CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o.provides.build: CMakeFiles/guatOJ.dir/lib/
 
 CMakeFiles/guatOJ.dir/compare.cpp.o: CMakeFiles/guatOJ.dir/flags.make
 CMakeFiles/guatOJ.dir/compare.cpp.o: ../compare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/guatOJ.dir/compare.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/compare.cpp.o -c /Users/jieshi/CLionProjects/guatOJ/compare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/guatOJ.dir/compare.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/compare.cpp.o -c /Users/jieshi/Documents/GitHub/guatOJ/src/compare.cpp
 
 CMakeFiles/guatOJ.dir/compare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/guatOJ.dir/compare.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/CLionProjects/guatOJ/compare.cpp > CMakeFiles/guatOJ.dir/compare.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/Documents/GitHub/guatOJ/src/compare.cpp > CMakeFiles/guatOJ.dir/compare.cpp.i
 
 CMakeFiles/guatOJ.dir/compare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/guatOJ.dir/compare.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/CLionProjects/guatOJ/compare.cpp -o CMakeFiles/guatOJ.dir/compare.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/Documents/GitHub/guatOJ/src/compare.cpp -o CMakeFiles/guatOJ.dir/compare.cpp.s
 
 CMakeFiles/guatOJ.dir/compare.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/guatOJ.dir/compare.cpp.o.provides.build: CMakeFiles/guatOJ.dir/compar
 
 CMakeFiles/guatOJ.dir/single_pipe.cpp.o: CMakeFiles/guatOJ.dir/flags.make
 CMakeFiles/guatOJ.dir/single_pipe.cpp.o: ../single_pipe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/guatOJ.dir/single_pipe.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/single_pipe.cpp.o -c /Users/jieshi/CLionProjects/guatOJ/single_pipe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/guatOJ.dir/single_pipe.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/guatOJ.dir/single_pipe.cpp.o -c /Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.cpp
 
 CMakeFiles/guatOJ.dir/single_pipe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/guatOJ.dir/single_pipe.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/CLionProjects/guatOJ/single_pipe.cpp > CMakeFiles/guatOJ.dir/single_pipe.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.cpp > CMakeFiles/guatOJ.dir/single_pipe.cpp.i
 
 CMakeFiles/guatOJ.dir/single_pipe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/guatOJ.dir/single_pipe.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/CLionProjects/guatOJ/single_pipe.cpp -o CMakeFiles/guatOJ.dir/single_pipe.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.cpp -o CMakeFiles/guatOJ.dir/single_pipe.cpp.s
 
 CMakeFiles/guatOJ.dir/single_pipe.cpp.o.requires:
 
@@ -195,7 +195,7 @@ guatOJ: CMakeFiles/guatOJ.dir/compare.cpp.o
 guatOJ: CMakeFiles/guatOJ.dir/single_pipe.cpp.o
 guatOJ: CMakeFiles/guatOJ.dir/build.make
 guatOJ: CMakeFiles/guatOJ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable guatOJ"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable guatOJ"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/guatOJ.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/guatOJ.dir/clean:
 .PHONY : CMakeFiles/guatOJ.dir/clean
 
 CMakeFiles/guatOJ.dir/depend:
-	cd /Users/jieshi/CLionProjects/guatOJ/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jieshi/CLionProjects/guatOJ /Users/jieshi/CLionProjects/guatOJ /Users/jieshi/CLionProjects/guatOJ/cmake-build-debug /Users/jieshi/CLionProjects/guatOJ/cmake-build-debug /Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jieshi/Documents/GitHub/guatOJ/src /Users/jieshi/Documents/GitHub/guatOJ/src /Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug /Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug /Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/guatOJ.dir/depend
 

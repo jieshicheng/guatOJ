@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jieshi/CLionProjects/guatOJ/compare.cpp" "/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/compare.cpp.o"
-  "/Users/jieshi/CLionProjects/guatOJ/compiler.cpp" "/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/compiler.cpp.o"
-  "/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.cpp" "/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o"
-  "/Users/jieshi/CLionProjects/guatOJ/main.cpp" "/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/main.cpp.o"
-  "/Users/jieshi/CLionProjects/guatOJ/single_pipe.cpp" "/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir/single_pipe.cpp.o"
+  "/Users/jieshi/Documents/GitHub/guatOJ/src/compare.cpp" "/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/compare.cpp.o"
+  "/Users/jieshi/Documents/GitHub/guatOJ/src/compiler.cpp" "/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/compiler.cpp.o"
+  "/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.cpp" "/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o"
+  "/Users/jieshi/Documents/GitHub/guatOJ/src/main.cpp" "/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/main.cpp.o"
+  "/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.cpp" "/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir/single_pipe.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

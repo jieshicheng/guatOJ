@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/jieshi/CLionProjects/guatOJ/compare.cpp
+/Users/jieshi/Documents/GitHub/guatOJ/src/compare.cpp
 fcntl.h
 -
 zconf.h
@@ -16,33 +16,33 @@ iostream
 dirent.h
 -
 compare.h
-/Users/jieshi/CLionProjects/guatOJ/compare.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compare.h
 
-/Users/jieshi/CLionProjects/guatOJ/compare.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compare.h
 string
 -
 vector
 -
 lib/OJlib.h
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.h
 single_pipe.h
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.h
 
-/Users/jieshi/CLionProjects/guatOJ/compiler.cpp
+/Users/jieshi/Documents/GitHub/guatOJ/src/compiler.cpp
 zconf.h
 -
 iostream
 -
 compiler.h
-/Users/jieshi/CLionProjects/guatOJ/compiler.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compiler.h
 lib/OJlib.h
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.h
 single_pipe.h
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.h
 errno.h
 -
 
-/Users/jieshi/CLionProjects/guatOJ/compiler.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compiler.h
 string
 -
 vector
@@ -50,25 +50,25 @@ vector
 exception
 -
 single_pipe.h
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.h
 
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.cpp
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.cpp
 zconf.h
 -
 iostream
 -
 OJlib.h
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.h
 vector
 -
 
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.h
 cstddef
 -
 string
 -
 
-/Users/jieshi/CLionProjects/guatOJ/main.cpp
+/Users/jieshi/Documents/GitHub/guatOJ/src/main.cpp
 iostream
 -
 limits.h
@@ -82,11 +82,11 @@ fcntl.h
 sstream
 -
 compiler.h
-/Users/jieshi/CLionProjects/guatOJ/compiler.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compiler.h
 compare.h
-/Users/jieshi/CLionProjects/guatOJ/compare.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/compare.h
 
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.cpp
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.cpp
 zconf.h
 -
 fcntl.h
@@ -94,11 +94,11 @@ fcntl.h
 iostream
 -
 single_pipe.h
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.h
 lib/OJlib.h
-/Users/jieshi/CLionProjects/guatOJ/lib/OJlib.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/lib/OJlib.h
 
-/Users/jieshi/CLionProjects/guatOJ/single_pipe.h
+/Users/jieshi/Documents/GitHub/guatOJ/src/single_pipe.h
 exception
 -
 

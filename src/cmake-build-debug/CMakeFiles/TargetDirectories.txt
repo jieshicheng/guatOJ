@@ -1,3 +1,3 @@
-/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jieshi/CLionProjects/guatOJ/cmake-build-debug/CMakeFiles/guatOJ.dir
+/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jieshi/Documents/GitHub/guatOJ/src/cmake-build-debug/CMakeFiles/guatOJ.dir
