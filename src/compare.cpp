@@ -7,6 +7,9 @@
 #include <iostream>
 #include <dirent.h>
 #include "compare.h"
+#include <cstring>
+#include <algorithm>
+#include <sys/wait.h>
 
 namespace guatoj
 {

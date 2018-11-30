@@ -6,6 +6,7 @@
 #include <iostream>
 #include "OJlib.h"
 #include <vector>
+#include <cstring>
 
 namespace guatoj
 {

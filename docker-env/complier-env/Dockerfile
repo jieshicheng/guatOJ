@@ -1,3 +1,6 @@
+# docker compiler and run env
+# for judge end.
+
 FROM ubuntu:latest
 MAINTAINER linkcheng "951497836@qq.com"
 ENV REFRESHED_AT 2018-11-2

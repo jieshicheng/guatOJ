@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/guatOJ.dir/main.cpp.o CMakeFiles/guatOJ.dir/compiler.cpp.o CMakeFiles/guatOJ.dir/lib/OJlib.cpp.o CMakeFiles/guatOJ.dir/compare.cpp.o CMakeFiles/guatOJ.dir/single_pipe.cpp.o  -o guatOJ 

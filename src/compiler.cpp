@@ -5,10 +5,11 @@
 #include <zconf.h>
 #include <iostream>
 #include "compiler.h"
-#include "lib/OJlib.h"
+#include "OJlib.h"
 #include "single_pipe.h"
 #include <errno.h>
-
+#include <memory>
+#include <sys/wait.h>
 namespace guatoj
 {
 
@@ -42,7 +43,7 @@ const std::string &compiler::get_compiler_errmsg()
     return _err_buff;
 }
 
-void compiler::set_compiler_errmsg() throw(pipe_read_exception)
+void compiler::set_compiler_errmsg() noexcept(false)
 {
     int read_fd, write_fd;
     try

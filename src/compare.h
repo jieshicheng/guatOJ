@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include "lib/OJlib.h"
+#include "OJlib.h"
 #include "single_pipe.h"
 
 namespace guatoj

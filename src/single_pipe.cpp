@@ -6,7 +6,8 @@
 #include <fcntl.h>
 #include <iostream>
 #include "single_pipe.h"
-#include "lib/OJlib.h"
+#include "OJlib.h"
+#include <vector>
 
 namespace guatoj
 {
