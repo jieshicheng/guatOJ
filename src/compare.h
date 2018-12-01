@@ -16,12 +16,10 @@ namespace guatoj
 class Compare
 {
 public:
-
     Compare(const std::string &input_dir, const std::string &output_dir, const std::string &process_path);
     ~Compare();
 
     guatoj::state run_compare();
-
 
     void reet_target(const std::string &input_dir, const std::string &output_dir, const std::string &process_path);
 
@@ -33,7 +31,6 @@ public:
     const std::string &get_process_path() const;
 
 private:
-
     const std::vector<std::string> get_input_files() const ;
     const std::vector<std::string> get_standard_files() const;
     const std::vector<std::string> get_file_vec(const std::string &path) const;

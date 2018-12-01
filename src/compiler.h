@@ -42,8 +42,6 @@ public:
 
     virtual ~compiler()
     {
-        //clear elf file on here
-        //....
     }
 
     const std::string &get_compiler_errmsg();
@@ -62,7 +60,7 @@ public:
 
 protected:
     void clear_errmsg();
-    void set_compiler_errmsg() noexcept(false);
+    void set_compiler_errmsg() noexcept;
     std::string get_random_name();
 
     std::string _user_name;

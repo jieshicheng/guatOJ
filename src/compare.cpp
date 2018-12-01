@@ -24,7 +24,7 @@ Compare::Compare(const std::string &input_dir, const std::string &output_dir, co
 
 Compare::~Compare()
 {
-    // empty
+    // clear elf file in here
 }
 
 /**
@@ -49,8 +49,8 @@ const std::vector<std::string> Compare::get_input_files() const
 }
 
 /**
- * given a folder called path
- * return all files that under the folder except . and ..
+ * given a folder path
+ * return all files name that under the folder except . and ..
  */
 const std::vector<std::string> Compare::get_file_vec(const std::string &path) const
 {
@@ -83,8 +83,7 @@ const std::vector<std::string> Compare::get_file_vec(const std::string &path) co
 }
 
 /**
- *
- * @return
+ * @return Accept Time_out Worry_ans Runtime_error
  */
 guatoj::state Compare::run_compare()
 {
@@ -155,7 +154,7 @@ guatoj::state Compare::run_compare()
             }
             else
             {
-                return guatoj::Unexpect_context;
+                
                 //if time out
                 //if runtime error
             }

@@ -43,14 +43,16 @@ const std::string &compiler::get_compiler_errmsg()
     return _err_buff;
 }
 
-void compiler::set_compiler_errmsg() noexcept(false)
+/**
+ * get compiler failed message from pipe
+ * if pipe is -1 means that pipe is closed, catch exception and set errmsg
+ */
+void compiler::set_compiler_errmsg() noexcept
 {
     int read_fd, write_fd;
     try
     {
         read_fd = _pipe_fd.get_read_descriptor();
-        write_fd = _pipe_fd.get_write_descriptor();
-
     }
     catch (bad_pipe_exception &exp)
     {
@@ -59,30 +61,7 @@ void compiler::set_compiler_errmsg() noexcept(false)
         return;
     }
 
-
-    int already_read = 0;
-    int left_read = PIPE_ERRMSG_SIZE;
-
-    std::shared_ptr<char> buf(new char[PIPE_ERRMSG_SIZE]);
-
-    while (left_read > 0)
-    {
-        ssize_t result = read(read_fd, buf.get(), left_read);
-        if (result == 0)
-            break;
-        else if (result == -1)
-        {
-            // pipe is noblock, so that if pipe is empty, read will return -1.
-            if (errno == EAGAIN)
-                break;
-            else
-                throw pipe_read_exception();
-        }
-
-        already_read += result;
-        left_read -= result;
-        _err_buff += buf.get();
-    }
+    _err_buff = get_fd_content(read_fd);
 }
 
 std::string compiler::get_random_name()

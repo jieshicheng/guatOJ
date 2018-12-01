@@ -7,13 +7,14 @@
 #include "OJlib.h"
 #include <vector>
 #include <cstring>
+#include <memory>
 
 namespace guatoj
 {
 
 /**
- * copy message from string to char buffer
- *
+ * copy message from string msg to char * dest.
+ * caller should promise that dest's space greater than or equal size.
  */
 void cpy_msg(char *dest, size_t size, const std::string &msg)
 {
@@ -31,65 +32,57 @@ void cpy_msg(char *dest, size_t size, const std::string &msg)
 }
 
 /**
- * first para meaning the standard answer
- * second para meaning the answer that ready for test
- * Tips:
- *      buffer is limit by 256 bytes,it should be improve by getting the size of the
- *      standardDesc and using it to limit the buffer
+ * using string to stores the content of fd.
+ * every time read READ_BYTES bytes from fd, and store in string.
+ * untill get the -1 of EOL
+ */
+std::string get_fd_content(int fd)
+{
+    std::shared_ptr<char> sp(new char[READ_BYTES]);
+    std::string buffer;
+
+    size_t already_read = 0;
+    int readed;
+    while ((readed = read(fd, sp.get(), READ_BYTES)) != 0)
+    {
+        if (readed == -1)
+        {
+            if (errno == EAGAIN)
+            {
+                break;
+            }
+            else
+            {
+                //fetal error
+            }
+        }
+        sp.get()[readed] = '\0';
+        already_read += readed;
+        buffer += sp.get();
+    }
+
+    return buffer;
+}
+
+/**
+ * check the two file descriptor's content whether same.
+ *
  */
 bool is_content_equal(int fd1, int fd2)
 {
-    char bufferA[256], bufferB[256];
-    // keep the already read bytes and status of read
-    ssize_t stat;
-    // the size of standard answer. it be limited by 256
-    ssize_t output_data_length = 0;
-    while ((stat = read(fd1, bufferA, 256)) != 0)
-    {
-        if (stat == -1)
-        {
-            if (errno == EAGAIN)
-            {
-                // read empty descriptor.
-                break;
-            }
-            else
-            {
-                // should add error process
-                exit(1);
-            }
-        }
-        output_data_length += stat;
-    }
-    bufferA[output_data_length] = '\0';
-    std::cout << bufferA << std::endl;
-    while ((stat = read(fd2, bufferB, output_data_length)) != 0)
-    {
-        if (stat == -1)
-        {
-            if (errno == EAGAIN)
-            {
-                break;
-            }
-            else
-            {
-                // should add error process
-                exit(1);
-            }
-        }
-    }
-    bufferB[output_data_length] = '\0';
-    std::cout << bufferB << std::endl;
-    stat = 0;
-    while (stat < output_data_length)
-    {
-        if (bufferA[stat] != bufferB[stat])
-            return false;
-        ++stat;
-    }
-    return true;
+    std::string text1 = get_fd_content(fd1);
+    std::string text2 = get_fd_content(fd2);
+
+    if (text1.length() != text2.length() || text1 != text2)
+        return false;
+    else
+        return true;
 }
 
+/**
+ * exec a new procedure, it recive vector<string> as parameters
+ *  and transfer it to char *[] to execvp function.
+ */
 void execvp_vec(const std::vector<std::string> &parameters)
 {
     char *arg_vec[parameters.size() + 1];

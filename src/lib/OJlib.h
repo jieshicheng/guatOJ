@@ -11,19 +11,17 @@
 
 namespace guatoj
 {
-
+#define READ_BYTES 512
 #define PIPE_ERRMSG_SIZE 512
 
 enum state
 {
-    Accept,
-    Complier_failed,
-    Time_out,
-    Time_exceed,
-    Unexpect_context,
-    Worry_ans,
-    RunTime_error,
-    Answer_error
+    Accept, // code work correctly
+    Complier_failed, // compiler error
+    Time_out, // exceed the time that subject stipulated
+    Worry_ans, // code work error
+    RunTime_error, // in the run time, your code make mistake
+    Answer_error // this means the question relevant documents error
 };
 
 void cpy_msg(char *dest, size_t size, const std::string &msg);
@@ -31,6 +29,8 @@ void cpy_msg(char *dest, size_t size, const std::string &msg);
 bool is_content_equal(int fd1, int fd2);
 
 void execvp_vec(const std::vector<std::string> &parameters);
+
+std::string get_fd_content(int fd);
 
 } // end of namespace guatoj
 

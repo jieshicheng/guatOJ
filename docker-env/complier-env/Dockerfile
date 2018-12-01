@@ -1,5 +1,7 @@
 # docker compiler and run env
 # for judge end.
+# if you living in china, you should using vpn or anything else to across the wall
+#  otherwise may not be able to build this images.
 
 FROM ubuntu:latest
 MAINTAINER linkcheng "951497836@qq.com"
@@ -10,6 +12,7 @@ RUN apt-get -y update
 RUN apt-get -y install vim 
 
 # cmake
+RUN apt-get -y update 
 RUN apt-get -y install cmake
 
 # must greater than 7.2 to complier cinatra
@@ -28,9 +31,8 @@ RUN apt-get -y install uuid-dev
 RUN apt-get -y install mlocate
 RUN updatedb
 
-# download thirth part framework
-# cinatra -----http server framework
+# download guatOJ 
 WORKDIR /root/guatOJ/
-RUN git clone https://github.com/qicosmos/cinatra.git
+RUN git clone https://github.com/jieshicheng/guatOJ.git
 
-# g++ -o server cjstest.cpp -std=c++17 -L/usr/lib/x86_64-linux-gnu -lboost_filesystem -lboost_system -lpthread -luuid -lstdc++fs
+EXPOSE 80
