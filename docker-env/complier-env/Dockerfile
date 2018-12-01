@@ -13,7 +13,7 @@ RUN apt-get -y install vim
 
 # cmake
 RUN apt-get -y update 
-RUN apt-get -y install cmake
+RUN apt-get -y install make
 
 # must greater than 7.2 to complier cinatra
 RUN apt-get -y install gcc 
