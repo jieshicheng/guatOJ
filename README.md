@@ -23,11 +23,9 @@
 
 ***项目由三个docker镜像组成***
 
-* 评测端（C++）
-* 网站后端（PHP + nginx）
-* 数据库端（Mysql）
-
-Dockerfile都在 ***"src/docker-env/"*** 目录下
+* 评测端（C++）Dockerfile : docker-env/judge-end/
+* 网站后端（PHP + nginx）Dockerfile : docker-env/web-end/
+* 数据库端（Mysql）Dockerfile : docker-env/mysql
 
 ## 安装说明
 
