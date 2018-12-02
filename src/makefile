@@ -1,7 +1,7 @@
 BUILD_DIR = ./build
 CC = g++
 LD = ld
-LIB = -I ./lib -I ../thirtPart/cinatra -I ../thirtPart/jsoncpp
+LIB = -I ./lib -I ../thirtPart/cinatra -I ../thirtPart/jsoncpp -I /usr/include/c++/5/experimental
 DLL = -luuid -lboost_system -lboost_filesystem -lpthread -lstdc++fs
 COMFLAGS = -c $(LIB) $(DLL) -std=c++17
 LDFLAGS = $(DLL)

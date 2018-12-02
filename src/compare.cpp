@@ -2,8 +2,8 @@
 // Created by 程杰仕 on 2018/6/4.
 //
 
+#include <unistd.h>
 #include <fcntl.h>
-#include <zconf.h>
 #include <iostream>
 #include <dirent.h>
 #include "compare.h"

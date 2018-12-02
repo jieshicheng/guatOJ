@@ -2,7 +2,7 @@
 // Created by 程杰仕 on 2018/6/4.
 //
 
-#include <zconf.h>
+#include <unistd.h>
 #include <fcntl.h>
 #include <iostream>
 #include "single_pipe.h"

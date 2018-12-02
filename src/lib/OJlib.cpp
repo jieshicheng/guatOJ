@@ -2,12 +2,13 @@
 // Created by 程杰仕 on 2018/6/4.
 //
 
-#include <zconf.h>
+//#include <zconf.h>
 #include <iostream>
 #include "OJlib.h"
 #include <vector>
 #include <cstring>
 #include <memory>
+#include <unistd.h>
 
 namespace guatoj
 {

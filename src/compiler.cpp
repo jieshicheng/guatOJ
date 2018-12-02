@@ -2,7 +2,7 @@
 // Created by 程杰仕 on 2018/11/2.
 //
 
-#include <zconf.h>
+#include <unistd.h>
 #include <iostream>
 #include "compiler.h"
 #include "OJlib.h"
