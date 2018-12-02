@@ -24,4 +24,4 @@ RUN apt-get update && apt-get -y install mlocate && updatedb
 WORKDIR /root/guatOJ/
 RUN git clone https://github.com/jieshicheng/guatOJ.git
 
-EXPOSE 80
+EXPOSE 8080

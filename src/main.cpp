@@ -61,14 +61,12 @@ int main(int argc, char *argv[])
 
     }
 
-	int max_thread_num = std::thread::hardware_concurrency();
-	cinatra::http_server server(max_thread_num);
-	server.listen("0.0.0.0", "8080");
-	server.set_http_handler<cinatra::GET, cinatra::POST>("/", [](cinatra::request& req, cinatra::response& res) {
-		res.set_status_and_content(cinatra::status_type::ok, "hello world");
-	});
-
-	server.run();
-
+    int max_thread_num = std::thread::hardware_concurrency();
+    cinatra::http_server server(max_thread_num);
+    server.listen("0.0.0.0", "8080");
+    server.set_http_handler<cinatra::GET, cinatra::POST>("/", [](cinatra::request& req, cinatra::response& res) {
+        res.set_status_and_content(cinatra::status_type::ok, "hello world");
+    });
+    server.run();
     exit(0);
 }
