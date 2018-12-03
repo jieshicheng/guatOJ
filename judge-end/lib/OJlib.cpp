@@ -93,5 +93,23 @@ void execvp_vec(const std::vector<std::string> &parameters)
     execvp(arg_vec[0], (arg_vec));
 }
 
+/**
+ * This function checks whether the str ends with /, if not then append to
+ */
+void append_divd(std::string &str)
+{
+    if (str == "")
+        return;
+    if (*(str.end() - 1) != '/')
+        str = str + "/";
+}
+
+bool delete_file(const std::string &file_path)
+{
+    if (unlink(file_path.c_str()) == 0)
+        return true;
+    else 
+        return false;
+}
 
 } // end of namespace guatoj

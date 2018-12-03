@@ -21,7 +21,7 @@ public:
 
     guatoj::state run_compare();
 
-    void reet_target(const std::string &input_dir, const std::string &output_dir, const std::string &process_path);
+    void reset_target(const std::string &input_dir, const std::string &output_dir, const std::string &process_path);
 
     // get function
     const std::string &get_input_dir() const;
@@ -34,7 +34,6 @@ private:
     const std::vector<std::string> get_input_files() const ;
     const std::vector<std::string> get_standard_files() const;
     const std::vector<std::string> get_file_vec(const std::string &path) const;
-    void append_divd(std::string &str);
 
     std::string _input_dir;
     std::string _standard_dir;

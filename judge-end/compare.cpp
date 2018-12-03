@@ -27,17 +27,6 @@ Compare::~Compare()
     // clear elf file in here
 }
 
-/**
- * This function checks whether the str ends with /, if not then append to
- */
-void Compare::append_divd(std::string &str)
-{
-    if (str == "")
-        return;
-    if (*(str.end() - 1) != '/')
-        str = str + "/";
-}
-
 const std::vector<std::string> Compare::get_standard_files() const
 {
     return get_file_vec(_standard_dir);
@@ -178,7 +167,7 @@ const std::string &Compare::get_process_path() const
     return _process_path;
 }
 
-void Compare::reet_target(const std::string &input_dir, const std::string &output_dir, const std::string &process_path)
+void Compare::reset_target(const std::string &input_dir, const std::string &output_dir, const std::string &process_path)
 {
     _input_dir = input_dir;
     _standard_dir = output_dir;
