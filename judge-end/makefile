@@ -1,11 +1,13 @@
 BUILD_DIR = ./build
 CC = g++
 LD = ld
-LIB = -I ./lib -I ../tp/cinatra -I ../tp/jsoncpp
+LIB = -I ./lib -I ./tp/cinatra/ -I ./tp/jsoncpp/
 DLL = -luuid -lboost_system -lboost_filesystem -lpthread -lstdc++fs
 COMFLAGS = -c $(LIB) $(DLL) -std=c++17
 LDFLAGS = $(DLL)
-OBJS = $(BUILD_DIR)/OJlib.o $(BUILD_DIR)/single_pipe.o $(BUILD_DIR)/compare.o $(BUILD_DIR)/compiler.o $(BUILD_DIR)/main.o 
+OBJS =  $(BUILD_DIR)/OJlib.o $(BUILD_DIR)/single_pipe.o \
+		$(BUILD_DIR)/compare.o $(BUILD_DIR)/compiler.o \
+		$(BUILD_DIR)/jsoncpp.o $(BUILD_DIR)/main.o 
 
 ## compiler
 
@@ -22,6 +24,9 @@ $(BUILD_DIR)/single_pipe.o : ./single_pipe.cpp ./lib/OJlib.h
 	$(CC) $(COMFLAGS) $< -o $@
 
 $(BUILD_DIR)/OJlib.o : ./lib/OJlib.cpp
+	$(CC) $(COMFLAGS) $< -o $@
+
+$(BUILD_DIR)/jsoncpp.o : ./tp/jsoncpp/jsoncpp.cpp
 	$(CC) $(COMFLAGS) $< -o $@
 ## ld
 

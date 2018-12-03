@@ -136,6 +136,7 @@ std::string cpp_compiler::do_compiler()
 std::string java_compiler::do_compiler()
 {
     clear_errmsg();
+
     return "";
 }
 

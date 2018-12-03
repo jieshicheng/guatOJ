@@ -1,5 +1,23 @@
 {
-    "cpp_file_path" : "tmp/cpp/",
-    "java_file_path" : "tmp/java/",
-    "c_file_path" : "tmp/c/"
+    "server" :
+    {
+        "max_thread" : "8",
+        "port" : "8080"
+    },
+
+    "db" :
+    {
+        "db_port" : "12345",
+        "db_ip" :  "127.0.0.1",
+        "db_user" : "root",
+        "db_passwd" : "jieshicheng",
+        "db_name" : "guatoj"
+    },
+
+    "compiler" :
+    {
+        "tmp_c" : "tmp/c",
+        "tmp_cpp" : "tmp/cpp",
+        "tmp_java" : "tmp_java"
+    }
 }
