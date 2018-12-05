@@ -20,6 +20,15 @@ apt-cache search boost && apt-get -y install libboost-all-dev uuid-dev
 # locate command for debug
 RUN apt-get update && apt-get -y install mlocate && updatedb
 
+# install jdk
+RUN apt-get -y install wget
+WORKDIR /root/jdk
+RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/jdk-8u192-linux-x64.tar.gz
+RUN tar -zxvf /root/jdk/jdk-8u192-linux-x64.tar.gz -C /root/jdk/ && rm -rf /root/jdk/jdk-8u192-linux-x64.tar.gz
+
+ENV JAVA_HOME /root/jdk/jdk1.8.0_192/
+ENV PATH $PATH:$JAVA_HOME/bin
+
 # download guatOJ 
 WORKDIR /root/guatOJ/
 RUN git clone https://github.com/jieshicheng/guatOJ.git

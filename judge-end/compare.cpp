@@ -10,6 +10,8 @@
 #include <cstring>
 #include <algorithm>
 #include <sys/wait.h>
+#include <string>
+#include <vector>
 
 namespace guatoj
 {
@@ -74,7 +76,7 @@ const std::vector<std::string> Compare::get_file_vec(const std::string &path) co
 /**
  * @return Accept Time_out Worry_ans Runtime_error
  */
-guatoj::state Compare::run_compare()
+state Compare::run_compare(const std::vector<std::string> &run_argvs)
 {
     /**
      * get the all of file in the input dir and out dir
@@ -88,7 +90,7 @@ guatoj::state Compare::run_compare()
 
     if (input_file_vec != output_file_vec)
     {
-        return guatoj::Answer_error;
+        return Answer_error;
     }
 
     // start execute and compare.
@@ -115,9 +117,8 @@ guatoj::state Compare::run_compare()
             close(out_pipe.get_write_descriptor());
 
             // construct run env
-            std::vector<std::string> arg_vec(1);
-            arg_vec[0] = _process_path;
-            guatoj::execvp_vec(arg_vec);
+            
+            execvp_vec(run_argvs);
 
             //process run here means error.so eixt with 1
             printf("fetal error: should't be here\n");
@@ -138,7 +139,7 @@ guatoj::state Compare::run_compare()
                 }
                 else
                 {
-                     return guatoj::Worry_ans;
+                    return Worry_ans;
                 }
             }
             else
@@ -149,7 +150,26 @@ guatoj::state Compare::run_compare()
             }
         }
     }
-    return guatoj::Accept;
+    return Accept;
+}
+
+state Compare::run_cstyle_compare()
+{
+    std::vector<std::string> vec;
+    vec.push_back(_process_path);
+    return run_compare(vec);
+}
+
+state Compare::run_java_compare(const std::string &interpreter)
+{
+    std::string file_name = _process_path.substr(_process_path.find_last_of('/') + 1, _process_path.find_last_of('.') - _process_path.find_last_of('/') - 1);
+    std::vector<std::string> vec;
+    vec.push_back(interpreter);
+    vec.push_back("-cp");
+    vec.push_back(_process_path.substr(0, _process_path.find_last_of('/')));
+    vec.push_back(file_name);
+    std::cout << vec[2] << std::endl << vec[3] << std::endl;
+    return run_compare(vec);
 }
 
 const std::string &Compare::get_input_dir() const

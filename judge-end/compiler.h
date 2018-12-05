@@ -63,6 +63,7 @@ protected:
     void clear_errmsg();
     void set_compiler_errmsg() noexcept;
     std::string get_random_name();
+    bool do_fork(const std::string &execute_file);
 
     std::string _user_name;
     std::string _file_path;
@@ -105,6 +106,8 @@ public:
         _parameters.push_back("-o");
         _parameters.push_back("");
         _parameters.push_back("-std=c11");
+        for (const auto &str : parameters)
+            _parameters.push_back(str);
     }
 };
 
@@ -117,6 +120,8 @@ public:
         compiler(user_name, file_path, tmp_path)
     {
         _parameters.push_back("javac");
+        _parameters.push_back("");
+        _parameters.push_back("-d");
         _parameters.push_back("");
         for (const auto &str : parameters)
             _parameters.push_back(str);

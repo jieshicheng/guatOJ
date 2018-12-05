@@ -73,7 +73,6 @@ bool is_content_equal(int fd1, int fd2)
 {
     std::string text1 = get_fd_content(fd1);
     std::string text2 = get_fd_content(fd2);
-
     if (text1.length() != text2.length() || text1 != text2)
         return false;
     else

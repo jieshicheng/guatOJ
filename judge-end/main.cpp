@@ -22,12 +22,11 @@ guatoj::state submit(const string &flag, const string &code_path, const string &
         ptr = new guatoj::cpp_compiler("cjs", code_path, vector<string>(), "tmp/cpp/");
     else if (flag == "1")
         ptr = new guatoj::c_compiler("cjs", code_path, vector<string>(), "tmp/c/");
-    else
+    else if (flag == "2")
         ptr = new guatoj::java_compiler("cjs", code_path, vector<string>(), "tmp/java/");
 
     string execuatable = ptr->do_compiler();
     cout << execuatable << endl;
-
     if (execuatable == "")
     {
         cout << ptr->get_compiler_errmsg() << endl;
@@ -36,7 +35,10 @@ guatoj::state submit(const string &flag, const string &code_path, const string &
     else
     {
         guatoj::Compare comp(input, standard, execuatable);
-        ans = comp.run_compare();
+        if (flag == "2")
+            ans = comp.run_java_compare("java");
+        else
+            ans = comp.run_cstyle_compare();
     }
     guatoj::delete_file(execuatable);
     return ans;
@@ -44,10 +46,8 @@ guatoj::state submit(const string &flag, const string &code_path, const string &
 
 int main(int argc, char *argv[])
 {
-    /*
     guatoj::state ans = submit(argv[1], argv[2], argv[3], argv[4]);
     cout << ans << endl;
-    */
 
     Json::Value root;
     Json::Reader read;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     string tmp_java = root["java_file_path"].asString();
 
 
-
+    /*
     int max_thread_num = std::thread::hardware_concurrency();
     cinatra::http_server server(max_thread_num);
     server.listen("0.0.0.0", "8080");
@@ -71,5 +71,6 @@ int main(int argc, char *argv[])
     });
 
     server.run();
+    */
     exit(0);
 }
