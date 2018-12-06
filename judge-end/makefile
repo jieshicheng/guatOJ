@@ -2,7 +2,7 @@ BUILD_DIR = ./build
 CC = g++
 LD = ld
 LIB = -I ./lib -I ./tp/cinatra/ -I ./tp/jsoncpp/
-DLL = -luuid -lboost_system -lboost_filesystem -lpthread -lstdc++fs
+DLL = -luuid -lboost_system -lboost_filesystem -lpthread -lstdc++fs -lglog
 COMFLAGS = -c $(LIB) $(DLL) -std=c++17
 LDFLAGS = $(DLL)
 OBJS =  $(BUILD_DIR)/OJlib.o $(BUILD_DIR)/single_pipe.o \

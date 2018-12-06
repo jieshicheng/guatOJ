@@ -32,5 +32,11 @@ ENV PATH $PATH:$JAVA_HOME/bin
 # download guatOJ 
 WORKDIR /root/guatOJ/
 RUN git clone https://github.com/jieshicheng/guatOJ.git
+RUN git clone https://github.com/google/glog
+WORKDIR /root/guatOJ/glog
+RUN ./autogen.sh && ./configure && make -j 24 && make install
+RUN cp /usr/local/lib/libglog.so.0.0.0 /usr/lib/libglog.so.0
+
+WORKDIR /root/guatOJ 
 
 EXPOSE 8080

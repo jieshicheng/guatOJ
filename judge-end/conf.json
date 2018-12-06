@@ -16,8 +16,14 @@
 
     "compiler" :
     {
-        "tmp_c" : "tmp/c",
-        "tmp_cpp" : "tmp/cpp",
-        "tmp_java" : "tmp_java"
+        "tmp_dir_c_" : "./tmp/c/",
+        "tmp_dir_cpp" : "./tmp/cpp/",
+        "tmp_dir_java" : "./tmp_java/"
+    },
+
+    "log" :
+    {
+        "log_dir" : "./log/",
+        "log_level" : "INFO"
     }
 }

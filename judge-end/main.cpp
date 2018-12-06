@@ -11,6 +11,7 @@
 #include <string>
 #include "json/json.h"
 #include <fstream>
+#include <glog/logging.h>
 
 using namespace std;
 
@@ -46,8 +47,16 @@ guatoj::state submit(const string &flag, const string &code_path, const string &
 
 int main(int argc, char *argv[])
 {
+    google::InitGoogleLogging(argv[0]);
+    google::SetLogDestination(google::GLOG_INFO, "./log/_");
+
     guatoj::state ans = submit(argv[1], argv[2], argv[3], argv[4]);
     cout << ans << endl;
+    LOG(INFO) << "gg";
+    LOG(WARNING) << "ggdd";
+    LOG(ERROR) << "ggdd";
+    LOG(FATAL) << "gssgdd";
+
 
     Json::Value root;
     Json::Reader read;
@@ -59,7 +68,6 @@ int main(int argc, char *argv[])
     string tmp_java = root["java_file_path"].asString();
 
 
-    /*
     int max_thread_num = std::thread::hardware_concurrency();
     cinatra::http_server server(max_thread_num);
     server.listen("0.0.0.0", "8080");
@@ -71,6 +79,5 @@ int main(int argc, char *argv[])
     });
 
     server.run();
-    */
     exit(0);
 }
