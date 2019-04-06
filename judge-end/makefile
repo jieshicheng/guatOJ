@@ -1,32 +1,41 @@
 BUILD_DIR = ./build
 CC = g++
 LD = ld
-LIB = -I ./lib -I ./tp/cinatra/ -I ./tp/jsoncpp/
+LIB = -I ./ -I ./tp/cinatra/ -I ./tp/jsoncpp/
 DLL = -luuid -lboost_system -lboost_filesystem -lpthread -lstdc++fs -lglog
 COMFLAGS = -c $(LIB) $(DLL) -std=c++17
 LDFLAGS = $(DLL)
-OBJS =  $(BUILD_DIR)/OJlib.o $(BUILD_DIR)/single_pipe.o \
+OBJS =  $(BUILD_DIR)/oj_lib.o $(BUILD_DIR)/pipe_manage.o \
 		$(BUILD_DIR)/compare.o $(BUILD_DIR)/compiler.o \
-		$(BUILD_DIR)/jsoncpp.o $(BUILD_DIR)/main.o 
+		$(BUILD_DIR)/jsoncpp.o $(BUILD_DIR)/resource_limit.o $(BUILD_DIR)/question.o \
+		$(BUILD_DIR)/main.o 
 
 ## compiler
 
-$(BUILD_DIR)/main.o : ./main.cpp ./compiler.h ./compare.h ./single_pipe.h ./lib/OJlib.h
+$(BUILD_DIR)/main.o : ./src/main.cc ./src/compiler.h ./src/compare.h ./src/pipe_manage.h \
+						./lib/oj_lib.h ./src/question.h ./src/resource_limit.h
 	$(CC) $(COMFLAGS) $< -o $@
 
-$(BUILD_DIR)/compare.o : ./compare.cpp ./lib/OJlib.h ./single_pipe.h
+$(BUILD_DIR)/compare.o : ./src/compare.cc ./lib/oj_lib.h ./src/pipe_manage.h ./src/resource_limit.h \
+						./src/question.h
 	$(CC) $(COMFLAGS) $< -o $@
 
-$(BUILD_DIR)/compiler.o : ./compiler.cpp ./lib/OJlib.h ./single_pipe.h
+$(BUILD_DIR)/compiler.o : ./src/compiler.cc ./lib/oj_lib.h ./src/pipe_manage.h ./src/resource_limit.h
 	$(CC) $(COMFLAGS) $< -o $@
 
-$(BUILD_DIR)/single_pipe.o : ./single_pipe.cpp ./lib/OJlib.h
+$(BUILD_DIR)/pipe_manage.o : ./src/pipe_manage.cc ./lib/oj_lib.h
 	$(CC) $(COMFLAGS) $< -o $@
 
-$(BUILD_DIR)/OJlib.o : ./lib/OJlib.cpp
+$(BUILD_DIR)/oj_lib.o : ./lib/oj_lib.cc
 	$(CC) $(COMFLAGS) $< -o $@
 
 $(BUILD_DIR)/jsoncpp.o : ./tp/jsoncpp/jsoncpp.cpp
+	$(CC) $(COMFLAGS) $< -o $@
+
+$(BUILD_DIR)/resource_limit.o : ./src/resource_limit.cc ./lib/oj_lib.h
+	$(CC) $(COMFLAGS) $< -o $@
+
+$(BUILD_DIR)/question.o : ./src/question.cc ./lib/oj_lib.h
 	$(CC) $(COMFLAGS) $< -o $@
 ## ld
 

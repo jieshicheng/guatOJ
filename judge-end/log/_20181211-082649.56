@@ -1,0 +1,5 @@
+Log file created at: 2018/12/11 08:26:49
+Running on machine: 5351990f6248
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 08:26:49.724474    56 main.cc:66] server start
+I1211 08:26:49.730284    56 main.cc:69] conf content:

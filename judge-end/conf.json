@@ -23,7 +23,6 @@
 
     "log" :
     {
-        "log_dir" : "./log/",
-        "log_level" : "INFO"
+        "log_dir" : "./log/"
     }
 }

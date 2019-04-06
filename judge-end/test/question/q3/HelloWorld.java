@@ -7,6 +7,6 @@ public class HelloWorld{
         int b = sc.nextInt();
         int c = sc.nextInt();
         int d = sc.nextInt();
-        System.out.format("%d %d %d %d", d, c, b, a);
+       	System.out.format("%d %d %d %d", d, c, b, a);
     }
 }
